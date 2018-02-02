@@ -1,0 +1,71 @@
+.panel-title{
+    color: #d1cbbc;
+}
+.myrow-container {
+    margin: 20px;
+
+}
+
+.btn {
+    padding: 2px 2px;
+    width: 5em;
+    height: 2em;
+    background-color: #4d3a1e;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+}
+
+.btn:hover, .btn:focus {
+    border: 1px solid #4d3a1e;
+    background-color: #fff;
+    color: #000;
+}
+
+a.aEdit:link, a.aDelete:link {
+    color: #a83016;
+}
+
+a.aEdit:visited, a.aDelete:visited {
+    color: #947872;
+}
+
+a.aEdit:hover, a.aDelete:hover {
+    color: #60a870;
+}
+
+a.aEdit:active, a.aDelete:active {
+    color: #ded728;
+}
+
+a.aCreateUser:link {
+    color: #d1cbbc;
+}
+
+a.aCreateUser:visited {
+    color: #c4bba5;
+}
+
+a.aCreateUser:hover {
+    color: #a0cc95;
+}
+
+.panel-footer a {
+    font-size: 1.2em;
+}
+
+.panel-footer a:link {
+    color: #d1cbbc;
+}
+
+.panel-footer a:visited {
+    color: #c4bba5;
+}
+
+.panel-footer a:hover {
+    color: #a0cc95;
+}
+
+.panel-footer a:active {
+    color: #ded728;
+}
