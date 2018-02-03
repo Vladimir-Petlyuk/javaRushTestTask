@@ -4,9 +4,6 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-/**
- * Created by Владимир on 04.06.2017.
- */
 @Entity
 @Table(name = "BOOK")
 public class Book {

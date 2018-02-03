@@ -17,6 +17,7 @@
     <link rel='stylesheet' href='${pageContext.request.contextPath}/resources/core/styles.css'>
 
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 </head>
 <body>
@@ -27,7 +28,7 @@
                 <div align="left"><a id="createBook" class="aCreateBook" href="createBook">Create new Book</a></div>
             </h3>
         </div>
-        <div class="panel-body">
+        <div class="panel-body" >
 
             <c:if test="${empty booksList}">
                 There are no Books
@@ -43,7 +44,7 @@
                     <br>
                 </form>
 
-                <table class="table table-hover table-bordered">
+                <table class="table table-hover table-bordered" >
                     <thead style="background-color: #b39b89;">
                     <tr>
                         <th>Id</th>
@@ -51,7 +52,7 @@
                         <th>Title</th>
                         <th>Description</th>
                         <th>ISBN</th>
-                        <th>Created date</th>
+                        <th>Date of placement</th>
                         <th>Print Year</th>
                         <th>Edit</th>
                         <th>Delete</th>
@@ -68,11 +69,13 @@
                                 </a>
                             </th>
 
-                            <th>
+                            <th style="font-size: 80%">
                                 <c:out value="${book.description}"/>
                             </th>
                             <th><c:out value="${book.isbn}"/></th>
-                            <th><c:out value="${book.dateOfCreation}"/></th>
+                            <th>
+                                <c:out value="${book.dateOfCreation.format(formatter)}"/>
+                            </th>
                             <th><c:out value="${book.printYear}"/></th>
                             <th><a class="aEdit" href="editBook?id=<c:out value='${book.id}'/>">Edit</a></th>
                             <th><a class="aDelete" href="deleteBook?id=<c:out value='${book.id}'/>">Delete</a></th>
@@ -117,6 +120,8 @@
         </div>
     </div>
 </div>
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/resources/core/skript.js"></script>
